@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,12 +16,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w0J-aG-OzT">
-                                <frame key="frameInset" minX="20" minY="70" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w0J-aG-OzT" userLabel="Segmented Control">
                                 <segments>
                                     <segment title="R"/>
                                     <segment title="O"/>
@@ -31,47 +30,57 @@
                                     <segment title="V"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bow Tie Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wog-hg-7fd">
-                                <frame key="frameInset" minX="20" minY="287" width="194" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bow Tie Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wog-hg-7fd" userLabel="Name Label">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rating: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rif-fP-Nr3">
-                                <frame key="frameInset" minX="20" minY="323" width="85" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating: 4/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rif-fP-Nr3" userLabel="Rating Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="# of times worn: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4R-Fj-d7I">
-                                <frame key="frameInset" minX="20" minY="362" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of times worn: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4R-Fj-d7I" userLabel="Times Worn Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last worn: 06/25/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-gZ-CGg">
-                                <frame key="frameInset" minX="20" minY="404" width="154" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last worn: 06/25/14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEw-gZ-CGg" userLabel="Last Worn Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*Favorite*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-dC-ikF">
-                                <frame key="frameInset" minX="20" minY="451" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Favorite*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-dC-ikF" userLabel="Favorite Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.5450980392" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-ht-KYL">
-                                <frame key="frameInset" minX="16" minY="109" width="343" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M0R-ht-KYL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="ojN-HT-1dC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o4R-Fj-d7I" firstAttribute="top" secondItem="rif-fP-Nr3" secondAttribute="bottom" constant="18" id="5yZ-bv-YKy"/>
+                            <constraint firstItem="rif-fP-Nr3" firstAttribute="top" secondItem="Wog-hg-7fd" secondAttribute="bottom" constant="15" id="BVi-K6-ggF"/>
+                            <constraint firstItem="Wog-hg-7fd" firstAttribute="top" secondItem="M0R-ht-KYL" secondAttribute="bottom" constant="38" id="Fyj-Ap-Ri8"/>
+                            <constraint firstItem="Wog-hg-7fd" firstAttribute="leading" secondItem="o4R-Fj-d7I" secondAttribute="leading" id="GkW-46-Gym"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="M0R-ht-KYL" secondAttribute="leading" id="MO6-Zv-dHo"/>
+                            <constraint firstItem="M0R-ht-KYL" firstAttribute="top" secondItem="w0J-aG-OzT" secondAttribute="bottom" constant="8" id="RgE-ho-hUF"/>
+                            <constraint firstItem="w0J-aG-OzT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="Wla-WO-qwD"/>
+                            <constraint firstItem="UEw-gZ-CGg" firstAttribute="leading" secondItem="icZ-dC-ikF" secondAttribute="leading" constant="-4" id="XQz-kw-3GC"/>
+                            <constraint firstItem="Wog-hg-7fd" firstAttribute="leading" secondItem="rif-fP-Nr3" secondAttribute="leading" constant="-4" id="Zdc-Fz-wny"/>
+                            <constraint firstItem="UEw-gZ-CGg" firstAttribute="top" secondItem="o4R-Fj-d7I" secondAttribute="bottom" constant="21" id="bLS-76-pxa"/>
+                            <constraint firstAttribute="trailing" secondItem="w0J-aG-OzT" secondAttribute="trailing" constant="16" id="dlP-wI-HlH"/>
+                            <constraint firstItem="icZ-dC-ikF" firstAttribute="top" secondItem="UEw-gZ-CGg" secondAttribute="bottom" constant="26" id="hDc-9e-Hov"/>
+                            <constraint firstItem="icZ-dC-ikF" firstAttribute="top" secondItem="Wog-hg-7fd" secondAttribute="bottom" constant="143" id="huF-0g-RWP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M0R-ht-KYL" secondAttribute="trailing" id="iP4-Lq-14a"/>
+                            <constraint firstItem="w0J-aG-OzT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="qdt-E3-880"/>
+                            <constraint firstItem="Wog-hg-7fd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="spa-Ka-1wx"/>
+                            <constraint firstItem="Wog-hg-7fd" firstAttribute="leading" secondItem="UEw-gZ-CGg" secondAttribute="leading" id="tnG-1g-chW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
