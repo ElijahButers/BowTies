@@ -29,6 +29,9 @@
                                     <segment title="I"/>
                                     <segment title="V"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="waI-c4-WGx"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bow Tie Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wog-hg-7fd" userLabel="Name Label">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -70,6 +73,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-hz-Qbf">
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Rate"/>
+                                <connections>
+                                    <action selector="rate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="euI-qC-npP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,6 +103,15 @@
                             <constraint firstItem="Wog-hg-7fd" firstAttribute="leading" secondItem="UEw-gZ-CGg" secondAttribute="leading" id="tnG-1g-chW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="favoriteLabel" destination="icZ-dC-ikF" id="6sr-mh-qqq"/>
+                        <outlet property="imageView" destination="M0R-ht-KYL" id="JQW-ir-uAN"/>
+                        <outlet property="lastWornLabel" destination="UEw-gZ-CGg" id="lDP-m5-jm1"/>
+                        <outlet property="nameLabel" destination="Wog-hg-7fd" id="Fnh-qF-pIS"/>
+                        <outlet property="ratingLabel" destination="rif-fP-Nr3" id="bSY-9b-DmB"/>
+                        <outlet property="segmentedControl" destination="w0J-aG-OzT" id="pv1-tV-xWF"/>
+                        <outlet property="timesWornLabel" destination="o4R-Fj-d7I" id="DE6-sF-Lf8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
