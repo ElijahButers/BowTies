@@ -13,6 +13,7 @@
 		E28D07561D79A1F800DAA086 /* BowTies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E28D07541D79A1F800DAA086 /* BowTies.xcdatamodeld */; };
 		E28D07581D79A1F800DAA086 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E28D07571D79A1F800DAA086 /* Assets.xcassets */; };
 		E28D075B1D79A1F800DAA086 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28D07591D79A1F800DAA086 /* LaunchScreen.storyboard */; };
+		E2CC16E01D7B0DEF00718EB2 /* SampleData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2CC16DF1D7B0DEF00718EB2 /* SampleData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E28D07571D79A1F800DAA086 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E28D075A1D79A1F800DAA086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E28D075C1D79A1F800DAA086 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2CC16DF1D7B0DEF00718EB2 /* SampleData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleData.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E28D07511D79A1F800DAA086 /* Main.storyboard */,
 				E28D07571D79A1F800DAA086 /* Assets.xcassets */,
 				E28D07591D79A1F800DAA086 /* LaunchScreen.storyboard */,
+				E2CC16DF1D7B0DEF00718EB2 /* SampleData.plist */,
 				E28D075C1D79A1F800DAA086 /* Info.plist */,
 				E28D07541D79A1F800DAA086 /* BowTies.xcdatamodeld */,
 			);
@@ -128,6 +131,7 @@
 			files = (
 				E28D075B1D79A1F800DAA086 /* LaunchScreen.storyboard in Resources */,
 				E28D07581D79A1F800DAA086 /* Assets.xcassets in Resources */,
+				E2CC16E01D7B0DEF00718EB2 /* SampleData.plist in Resources */,
 				E28D07531D79A1F800DAA086 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 				E28D07611D79A1F800DAA086 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
