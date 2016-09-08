@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        insertSimpleData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +43,7 @@ class ViewController: UIViewController {
             let count = try managedContext.count(for: request)
             if count > 0 { return }
         } catch let error as NSError {
-            print("Erros is \(error)")
+            print("Error is \(error)")
         }
         
         let path = Bundle.main.path(forResource: "SampleData", ofType: "plist")
