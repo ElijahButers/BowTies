@@ -20,7 +20,7 @@ extension Bowtie {
     @NSManaged public var lastWorn: NSDate?
     @NSManaged public var rating: Double
     @NSManaged public var searchKey: String?
-    @NSManaged public var timesWorn: Int32
+    @NSManaged public var timesWorn: NSNumber?
     @NSManaged public var photoData: NSData?
     @NSManaged public var tintColor: NSObject?
 

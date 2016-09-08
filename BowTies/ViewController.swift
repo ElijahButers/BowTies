@@ -30,6 +30,44 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // Insert sample data
+    func insertSimpleData() {
+        
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Bowtie")
+        request.predicate = NSPredicate(format: "searchKey != nil")
+        
+        do {
+            let count = try managedContext.count(for: request)
+            if count > 0 { return }
+        } catch let error as NSError {
+            print("Erros is \(error)")
+        }
+        
+        let path = Bundle.main.path(forResource: "SampleData", ofType: "plist")
+        let dataArray = NSArray(contentsOfFile: path!)!
+        
+        for dict: Any in dataArray {
+            let entity = NSEntityDescription.entity(forEntityName: "Bowtie", in: managedContext)
+            let bowtie = Bowtie(entity: entity!, insertInto: managedContext)
+            
+            let btDict = dict as! NSDictionary
+            
+            bowtie.name = btDict["name"] as? String
+            bowtie.searchKey = btDict["searchKey"] as? String
+            bowtie.rating = btDict["rating"] as? NSNumber as! Double
+            
+            let imageName = btDict["imageName"] as? String
+            let image = UIImage(named:imageName!)
+            let photoData = UIImagePNGRepresentation(image!)
+            bowtie.photoData = photoData as NSData?
+            
+            bowtie.lastWorn = btDict["lastWorn"] as? NSDate
+            bowtie.timesWorn = btDict["timesWorn"] as? NSNumber
+            bowtie.isFavorite = ((btDict["isFavorite"] as? NSNumber) != nil)
+            
+        }
+    }
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
     }
