@@ -56,6 +56,8 @@ class ViewController: UIViewController {
             bowtie.name = btDict["name"] as? String
             bowtie.searchKey = btDict["searchKey"] as? String
             bowtie.rating = btDict["rating"] as? NSNumber as! Double
+            let tintColorDict = btDict["tintColor"] as? NSDictionary
+            bowtie.tintColor = colorFromDict(dict: tintColorDict!)
             
             let imageName = btDict["imageName"] as? String
             let image = UIImage(named:imageName!)
@@ -67,6 +69,17 @@ class ViewController: UIViewController {
             bowtie.isFavorite = ((btDict["isFavorite"] as? NSNumber) != nil)
             
         }
+    }
+    
+    func colorFromDict(dict: NSDictionary) -> UIColor {
+        
+        let red = dict["red"] as! NSNumber
+        let green = dict["green"] as! NSNumber
+        let blue = dict["blue"] as! NSNumber
+        
+        let color = UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1)
+        
+        return color
     }
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
