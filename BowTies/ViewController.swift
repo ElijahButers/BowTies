@@ -116,6 +116,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
+        
+        let times = currentBowtie.timesWorn!.intValue
+        currentBowtie.timesWorn = NSNumber(integerLiteral: (times + 1))
+        currentBowtie.lastWorn = NSDate()
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 
     @IBAction func rate(_ sender: AnyObject) {
