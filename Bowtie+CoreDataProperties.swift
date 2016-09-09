@@ -16,9 +16,9 @@ extension Bowtie {
     }
 
     @NSManaged public var name: String?
-    @NSManaged public var isFavorite: Bool
+    @NSManaged public var isFavorite: NSNumber?
     @NSManaged public var lastWorn: NSDate?
-    @NSManaged public var rating: Double
+    @NSManaged public var rating: NSNumber?
     @NSManaged public var searchKey: String?
     @NSManaged public var timesWorn: NSNumber?
     @NSManaged public var photoData: NSData?

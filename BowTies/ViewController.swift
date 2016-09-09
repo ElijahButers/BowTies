@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         do {
             let results = try managedContext.fetch(request) as! [Bowtie]
-            // 
+            //
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
@@ -93,6 +93,24 @@ class ViewController: UIViewController {
         let color = UIColor(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1)
         
         return color
+    }
+    
+    func populate(_ bowtie: Bowtie) {
+        
+        imageView.image = UIImage(data: bowtie.photoData! as Data)
+        nameLabel.text = bowtie.name
+        ratingLabel.text = "Rating: \(bowtie.rating!.doubleValue)/5"
+        
+        timesWornLabel.text = "# times worn: \(bowtie.timesWorn!.intValue)"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        lastWornLabel.text = "Last worn: " + dateFormatter.string(from: bowtie.lastWorn! as Date)
+        favoriteLabel.isHidden = !bowtie.isFavorite!.boolValue
+        view.tintColor = bowtie.tintColor as! UIColor
+        
     }
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
