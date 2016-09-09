@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var favoriteLabel: UILabel!
     
     var managedContext: NSManagedObjectContext!
+    var currentBowtie: Bowtie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
