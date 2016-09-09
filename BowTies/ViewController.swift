@@ -129,6 +129,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rate(_ sender: AnyObject) {
+        
+        let alert = UIAlertController(title: "New Rating", message: "Rate this bow tie", preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+        })
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
+            
+            let textField = alert.textFields![0] as UITextField
+            //
+    })
+        alert.addTextField(configurationHandler: {
+            (textField: UITextField!) in
+            textField.keyboardType = .numberPad
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(saveAction)
+        
+        presentedViewController(alert, animated: true, completion: nil)
     }
 }
-
