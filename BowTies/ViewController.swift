@@ -26,6 +26,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         insertSimpleData()
         
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName:"Bowtie")
+        let firstTitle = segmentedControl.titleForSegment(at: 0)
+        
+        request.predicate = NSPredicate(format:"searchKey == %@", firstTitle!)
+        
+        do {
+            let results = try managedContext.fetch(request) as! [Bowtie]
+            // 
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
