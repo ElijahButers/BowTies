@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
             bowtie.name = btDict["name"] as? String
             bowtie.searchKey = btDict["searchKey"] as? String
-            bowtie.rating = btDict["rating"] as? NSNumber as! Double
+            bowtie.rating = btDict["rating"] as! NSNumber?
             let tintColorDict = btDict["tintColor"] as? NSDictionary
             bowtie.tintColor = colorFromDict(dict: tintColorDict!)
             
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
             
             bowtie.lastWorn = btDict["lastWorn"] as? NSDate
             bowtie.timesWorn = btDict["timesWorn"] as? NSNumber
-            bowtie.isFavorite = ((btDict["isFavorite"] as? NSNumber) != nil)
+            bowtie.isFavorite = btDict["isFavorite"] as? NSNumber
             
         }
     }
