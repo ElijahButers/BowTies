@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         do {
             let results = try managedContext.fetch(request) as! [Bowtie]
-            //
+            populate(results.first!)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
