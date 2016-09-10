@@ -157,6 +157,6 @@ class ViewController: UIViewController {
         alert.addAction(cancelAction)
         alert.addAction(saveAction)
         
-        presentedViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }
