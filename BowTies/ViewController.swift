@@ -112,7 +112,18 @@ class ViewController: UIViewController {
         lastWornLabel.text = "Last worn: " + dateFormatter.string(from: bowtie.lastWorn! as Date)
         favoriteLabel.isHidden = !bowtie.isFavorite!.boolValue
         view.tintColor = bowtie.tintColor as! UIColor
+    }
+    
+    func updateRating(_ numericString: String) {
         
+        currentBowtie.rating = (numericString as NSString).doubleValue as NSNumber?
+        
+        do {
+            try managedContext.save()
+            populate(currentBowtie)
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
