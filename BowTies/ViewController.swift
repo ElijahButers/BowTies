@@ -147,7 +147,7 @@ class ViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: .default, handler: { (action: UIAlertAction!) in
             
             let textField = alert.textFields![0] as UITextField
-            //
+            self.updateRating(textField.text!)
     })
         alert.addTextField(configurationHandler: {
             (textField: UITextField!) in
