@@ -123,20 +123,17 @@ class ViewController: UIViewController {
             populate(currentBowtie)
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)")
+            
+            if error.domain == NSCocoaErrorDomain && (error.code == NSValidationNumberTooLargeError || error.code == NSValidationNumberTooSmallError) {
+                    rate(currentBowtie)
+            }
         }
     }
+    
+    //MARK: - Actions
 
     @IBAction func segmentedControl(_ sender: AnyObject) {
         
-        let times = currentBowtie.timesWorn!.intValue
-        currentBowtie.timesWorn = NSNumber(integerLiteral: (times + 1))
-        currentBowtie.lastWorn = NSDate()
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
-        }
     }
 
     @IBAction func rate(_ sender: AnyObject) {
@@ -159,4 +156,18 @@ class ViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func wear(_ sender: AnyObject) {
+        
+        let times = currentBowtie.timesWorn!.intValue
+        currentBowtie.timesWorn = NSNumber(integerLiteral: (times + 1))
+        currentBowtie.lastWorn = NSDate()
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
 }
