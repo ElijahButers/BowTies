@@ -132,18 +132,20 @@ class ViewController: UIViewController {
     
     //MARK: - Actions
 
-    @IBAction func segmentedControl(_ sender: AnyObject) {
+    @IBAction func segmentedControl(_ control: UISegmentedControl) {
         
-        let times = currentBowtie.timesWorn!.intValue
-        currentBowtie.timesWorn = NSNumber(integerLiteral: (times + 1))
-        currentBowtie.lastWorn = NSDate()
+        let selectedValue = control.titleForSegment(at: control.selectedSegmentIndex)
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest (entityName: "Bowtie")
+        request.predicate = NSPredicate(format: "searchKey == %@", selectedValue!)
         
         do {
-            try managedContext.save()
+            let results = try managedContext.fetch(request) as! [Bowtie]
+            currentBowtie = results.first
+            populate(currentBowtie)
         } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
+            print("Could not fetch \(error), \(error.userInfo)")
+            }
         }
-    }
 
     @IBAction func rate(_ sender: AnyObject) {
         

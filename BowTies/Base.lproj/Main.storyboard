@@ -69,9 +69,6 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="f5t-wg-veJ"/>
                                 </constraints>
                                 <state key="normal" title="Wear"/>
-                                <connections>
-                                    <action selector="wear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdy-jY-YyA"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIC-hz-Qbf">
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
